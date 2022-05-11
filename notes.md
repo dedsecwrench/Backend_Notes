@@ -95,6 +95,7 @@ http.createServer((request,response)=>{
 # Request and Response in Node
 
 Request and Response object both are the callback function parameters and are used for Express. js and Node. js.
+
 The res object represents the HTTP response that an Express app sends when it gets an HTTP request.
 
 # Express
