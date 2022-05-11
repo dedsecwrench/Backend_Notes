@@ -100,7 +100,7 @@ The res object represents the HTTP response that an Express app sends when it ge
 
 # Express
 
-when your having lots and lots of API's and you need to maintain those API's inside a folder structure,
+when you're having lots and lots of API's and you need to maintain those API's inside a folder structure,
 then you need something which is known as Framework.
 
  => What is that Backend framework you used to create in the backend development ?
