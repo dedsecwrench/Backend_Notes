@@ -1,7 +1,7 @@
 # What is Frontend and Backend ?
 
     Frontend development =>
-    Basically whatever the user looking at on website, that is the frontend side of web application.
+    Basically, whatever the user looking at on the website, that is the frontend side of web application.
     developing UI
     UI = User Interface is anything a user interacts with on a website, application, or any digital device.
     Frontend consist of 1 thing only i.e React project directory. 
