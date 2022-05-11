@@ -33,7 +33,9 @@ Note => ***you can create frontend and backend in same folder if you are creatin
     so their is 1 thing if you want to access data from one application to another their is something which is known as API
 
  ***Always Remember this thing***
+ 
     So Whenever you're developing the Backend application that means you're developing the API.
+    
     API = Application Programming Interface
 
 # How many API's can have in one Backend application ?
