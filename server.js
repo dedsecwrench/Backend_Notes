@@ -75,28 +75,39 @@ const server = express()
 
 
 // Enable cors
-server.use(cors());
+// server.use(cors());
 
-server.get("/",(req,res)=>{
-    res.send("success")
-})
+// server.get("/",(req,res)=>{
+//     res.send("success")
+// })
 
-server.post("/addUser",(req,res)=>{
-    res.send(req.query)
-    console.log(req.query);
-    res.send(req.query)
-    res.send("success")
-})
+// server.post("/addUser",(req,res)=>{
+//     res.send(req.query)
+//     console.log(req.query);
+//     res.send(req.query)
+//     res.send("success")
+// })
 
-server.put("/editUser/:id",(req,res)=>{
-    res.send(req.query)
-    console.log(req.params);
-    res.send("success")
-})
+// server.put("/editUser/:id",(req,res)=>{
+//     res.send(req.query)
+//     console.log(req.params);
+//     res.send("success")
+// })
 
-server.listen(8000,()=>{
-    console.log("> Host URL : http://localhost:8000")
-})
+// server.listen(8000,()=>{
+//     console.log("> Host URL : http://localhost:8000")
+// })
 
 
 // ---------------------------------------------- 12April ----------------------------------------------------
+
+// importing combine.js as mainRouter from routes
+const mainRouter = require("./routes/combine.js");
+
+server.use(cors());
+
+server.use("/api/v1", mainRouter);
+
+server.listen(8000,()=>{
+    console.log("> Host URL : http://localhost:8000/api/v1")
+})
