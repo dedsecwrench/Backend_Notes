@@ -123,7 +123,7 @@ The res object represents the HTTP response that an Express app sends when it ge
 
     A module is a JavaScript library/file that you can import into other code using Node's require() function.
     Express itself is a module, as are the middleware and database libraries that we use in our Express applications.
-    
+
     The code below shows how we import a module by name, using the Express framework as an example. 
 
     const express = require('express');
@@ -167,7 +167,8 @@ If the current middleware function does not end the request-response cycle, it m
         response.send({username: "abc",id:1});
     }) 
 
-    middleware functions that return a Promise will call next(value) when they reject or throw an error. next will be called with either the rejected value or the thrown Error.
+    middleware functions that return a Promise will call next(value) when they reject or throw an error.
+    next will be called with either the rejected value or the thrown Error.
 
 Note => ***The call above to next(). Calling this function invokes the next middleware function in the app. The next() function is not a part of the Node.js or Express API, but is the third argument that is passed to the middleware function. The next() function could be named anything, but by convention it is always named “next”. To avoid confusion, always use this convention.***
 
