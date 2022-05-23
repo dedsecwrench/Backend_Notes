@@ -125,7 +125,10 @@ The res object represents the HTTP response that an Express app sends when it ge
 
 # Middleware in express rounting
 
-    Middleware functions are functions that have access to the request object (req), the response object (res), and the next function in the application’s request-response cycle. The next function is a function in the Express router which, when invoked, executes the middleware succeeding the current middleware.
+    Middleware functions are functions that have access to the request object (req),
+    the response object (res), and the next function in the application’s request-response cycle.
+    The next function is a function in the Express router which, when invoked,
+    executes the middleware succeeding the current middleware.
 
 Middleware functions can perform the following tasks :
 1. Execute any code.
