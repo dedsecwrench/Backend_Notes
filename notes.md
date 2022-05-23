@@ -100,32 +100,32 @@ The res object represents the HTTP response that an Express app sends when it ge
 
 # Install nodemon
 
-command to install nodemon => npm install nodemon
-Note=> in package.json => script section => add command -> "start": "nodemon yourServerFileName"
-what nodemon do is -> earlier when we were using node istead of nodemon we have to restart the server to apply the changes we made but in the case of nodemon we dont have to start the server again and again to apply the changes, whenever you make changes and save the file, after saving it'll automatically updates data on page, no need to restart the server.
+    command to install nodemon => npm install nodemon
+    Note=> in package.json => script section => add command -> "start": "nodemon yourServerFileName"
+    what nodemon do is -> earlier when we were using node istead of nodemon we have to restart the server to apply the changes we made but in the case of nodemon we dont have to start the server again and again to apply the changes, whenever you make changes and save the file, after saving it'll automatically updates data on page, no need to restart the server.
 
 # Express
 
-when your having lots and lots of API's and you need to maintain those API's inside a folder structure,
-then you need something which is known as Framework.
+    when your having lots and lots of API's and you need to maintain those API's inside a folder structure,
+    then you need something which is known as Framework.
 
  => What is that Backend framework you used to create in the backend development ?
  ***That is EXPRESS***
 
-Express provides methods to specify what function is called for a particular HTTP verb ( GET , POST , SET , etc.) and URL pattern ("Route"), and methods to specify what template ("view") engine is used, where template files are located, and what template to use to render a response.
+    Express provides methods to specify what function is called for a particular HTTP verb ( GET , POST , SET , etc.) and URL pattern ("Route"), and methods to specify what template ("view") engine is used, where template files are located, and what template to use to render a response.
 
 ***Importing and creating modules***
 
-A module is a JavaScript library/file that you can import into other code using Node's require() function. Express itself is a module, as are the middleware and database libraries that we use in our Express applications.
-The code below shows how we import a module by name, using the Express framework as an example. 
+    A module is a JavaScript library/file that you can import into other code using Node's require() function. Express itself is a module, as are the middleware and database libraries that we use in our Express applications.
+    The code below shows how we import a module by name, using the Express framework as an example. 
 
-const express = require('express');
-const server = express();
+    const express = require('express');
+    const server = express();
 
 
 # Middleware in express rounting
 
-Middleware functions are functions that have access to the request object (req), the response object (res), and the next function in the application’s request-response cycle. The next function is a function in the Express router which, when invoked, executes the middleware succeeding the current middleware.
+    Middleware functions are functions that have access to the request object (req), the response object (res), and the next function in the application’s request-response cycle. The next function is a function in the Express router which, when invoked, executes the middleware succeeding the current middleware.
 
 Middleware functions can perform the following tasks :
 1. Execute any code.
@@ -139,25 +139,25 @@ ex =>
 
 middleware takes three parameters that is => request, response, next
 
-const middleware = (request,response,next) =>{
-     console.log("MIDDLEWARE 1");
-     next();
- }
+    const middleware = (request,response,next) =>{
+        console.log("MIDDLEWARE 1");
+        next();
+    }
 
 If the current middleware function does not end the request-response cycle, it must call next() to pass control to the next middleware function. Otherwise, the request will be left hanging. 
 
 ***using midlleware which we created***
 
-server.use(middleware);
-.use method is used to use the middleware which we created.
+    server.use(middleware);
+    .use method is used to use the middleware which we created.
 
 ***using middleware in API***
 
-server.get("/user",middleware2,(request,response)=>{
-    response.send({username: "abc",id:1});
-}) 
+    server.get("/user",middleware2,(request,response)=>{
+        response.send({username: "abc",id:1});
+    }) 
 
-middleware functions that return a Promise will call next(value) when they reject or throw an error. next will be called with either the rejected value or the thrown Error.
+    middleware functions that return a Promise will call next(value) when they reject or throw an error. next will be called with either the rejected value or the thrown Error.
 
 Note => ***The call above to next(). Calling this function invokes the next middleware function in the app. The next() function is not a part of the Node.js or Express API, but is the third argument that is passed to the middleware function. The next() function could be named anything, but by convention it is always named “next”. To avoid confusion, always use this convention.***
 
@@ -165,47 +165,47 @@ Note => ***The call above to next(). Calling this function invokes the next midd
 # Express Routing
 
 ***Http Methods***
-GET,PUT,POST,DELETE
+=> GET,PUT,POST,DELETE
 
 
 # Sending the data (POST method)
 
 ***Query params***
 
-it is used to access multiple values from url
-ex =>  /addUser
-        request.query
+    it is used to access multiple values from url
+    ex =>  /addUser
+            request.query
 
 ***Url params***
 
-it is used to access single values from url
-ex =>  /editUser/:id
-        request.params
+    it is used to access single values from url
+    ex =>  /editUser/:id
+            request.params
 
 # CORS
 
-one of the application.. backend or frontend should enable cors, so that data can be passsed.
-.use method can be used for both middleware and cors.
+    one of the application.. backend or frontend should enable cors, so that data can be passsed.
+    .use method can be used for both middleware and cors.
 
-cors is mostly get enabled in backend.
+    cors is mostly get enabled in backend.
 
-import cors by => const cors = require("cors");
-then to ENABLE it =>  server.use(cors());
+    import cors by => const cors = require("cors");
+    then to ENABLE it =>  server.use(cors());
 
-install axios in frontend to pass or fetch the data.
-useEffect hook is used for API CALLS.
+    install axios in frontend to pass or fetch the data.
+    useEffect hook is used for API CALLS.
 
-without cors nothing works
-no API CALLS etc..
-if you are in the deployment stage then nothing will work without cors.
+    without cors nothing works
+    no API CALLS etc..
+    if you are in the deployment stage then nothing will work without cors.
 
 # proxy
 
-use proxy in your package.json file in backend (only for development).
-if this is your API => http://localhost:8000/
-add this part in the package.json file =>
-"proxy": "http://localhost:8000/",
-and then make request using API calls.
+    use proxy in your package.json file in backend (only for development).
+    if this is your API => http://localhost:8000/
+    add this part in the package.json file =>
+    "proxy": "http://localhost:8000/",
+    and then make request using API calls.
 
 # API call in useEffect HOOK in Frontend
 
