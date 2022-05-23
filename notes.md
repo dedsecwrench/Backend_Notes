@@ -102,7 +102,12 @@ The res object represents the HTTP response that an Express app sends when it ge
 
     command to install nodemon => npm install nodemon
     Note=> in package.json => script section => add command -> "start": "nodemon yourServerFileName"
-    what nodemon do is -> earlier when we were using node istead of nodemon we have to restart the server to apply the changes we made but in the case of nodemon we dont have to start the server again and again to apply the changes, whenever you make changes and save the file, after saving it'll automatically updates data on page, no need to restart the server.
+
+    what nodemon do is -> 
+    earlier when we were using node istead of nodemon we have to restart the server to apply the changes we made.
+    but in the case of nodemon we dont have to start the server again and again to apply the changes, 
+    whenever you make changes and save the file, after saving it'll automatically updates data on page,
+    no need to restart the server.
 
 # Express
 
@@ -116,7 +121,9 @@ The res object represents the HTTP response that an Express app sends when it ge
 
 ***Importing and creating modules***
 
-    A module is a JavaScript library/file that you can import into other code using Node's require() function. Express itself is a module, as are the middleware and database libraries that we use in our Express applications.
+    A module is a JavaScript library/file that you can import into other code using Node's require() function.
+    Express itself is a module, as are the middleware and database libraries that we use in our Express applications.
+    
     The code below shows how we import a module by name, using the Express framework as an example. 
 
     const express = require('express');
