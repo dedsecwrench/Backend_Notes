@@ -136,6 +136,7 @@ Middleware functions can perform the following tasks :
 
 ex =>
 ***Middleware created***
+
 middleware takes three parameters that is => request, response, next
 
 const middleware = (request,response,next) =>{
@@ -146,10 +147,12 @@ const middleware = (request,response,next) =>{
 If the current middleware function does not end the request-response cycle, it must call next() to pass control to the next middleware function. Otherwise, the request will be left hanging. 
 
 ***using midlleware which we created***
+
 server.use(middleware);
 .use method is used to use the middleware which we created.
 
 ***using middleware in API***
+
 server.get("/user",middleware2,(request,response)=>{
     response.send({username: "abc",id:1});
 }) 
@@ -168,11 +171,13 @@ GET,PUT,POST,DELETE
 # Sending the data (POST method)
 
 ***Query params***
+
 it is used to access multiple values from url
 ex =>  /addUser
         request.query
 
 ***Url params***
+
 it is used to access single values from url
 ex =>  /editUser/:id
         request.params
@@ -217,8 +222,12 @@ useEffect(()=>{
 })
 
 in useEffect Hook => 
-    axios.anyHttpMethod("Host URL(port) given to backend server API that you created").then((response)=>{
+
+    axios.anyHttpMethod("Host URL(port) given to backend server API that you created")
+    .then((response)=>{
             response here;
     })
 
+
+# Main Route
 
