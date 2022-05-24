@@ -193,7 +193,7 @@ Note => ***The call above to next(). Calling this function invokes the next midd
     ex =>  /editUser/:id
             request.params
 
-# CORS
+# CORS (Cross-Origin Resource Sharing)
 
     one of the application.. backend or frontend should enable cors, so that data can be passsed.
     .use method can be used for both middleware and cors.
