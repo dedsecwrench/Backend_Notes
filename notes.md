@@ -329,7 +329,7 @@ Folder structure =>
 
 har   : NORMAL TEXT h2345678912#$%^&9aTYGHBSJN@#$%^&(0R)      : HASHED VALUE
 
-## Login :
+# Login :
 
  1. FE will take data from user , email/username and password.
 
@@ -347,10 +347,12 @@ har   : NORMAL TEXT h2345678912#$%^&9aTYGHBSJN@#$%^&(0R)      : HASHED VALUE
 
  6. IRCTC Applications : Token Expiration
 
-
     /login - it will give you token , it will say that it should expire in 5 mins. 
+
     /contact - after 4 mins - this api user is trying to access by passing token , at this time he will get the response as well from BE. 
-    /user - after 5 mins - since the token will be expired by now. so the error will be sent to FE, now FE responsiblity would be to send the user back to login page is such error occurs. 
+
+    /user - after 5 mins - since the token will be expired by now. so the error will be sent to FE,
+    now FE responsiblity would be to send the user back to login page is such error occurs. 
     error msg would be : Session has expired, please re-login.
 
 ***Authentication : Authorization : Role Based access***
