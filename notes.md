@@ -357,13 +357,15 @@ har   : NORMAL TEXT h2345678912#$%^&9aTYGHBSJN@#$%^&(0R)      : HASHED VALUE
 
 ***Authentication : Authorization : Role Based access***
 
-    Authentication is used to authenticate someone's identity, whereas authorization is a way to provide permission to someone to access a particular resource.
+    Authentication is used to authenticate someone's identity, 
+    whereas authorization is a way to provide permission to someone to access a particular resource.
 
     Authentication is the log in and authorization is the permissions.
 
     authentication validates that users are who they claim to be. Usually with a username and password, 
     (401 status code for unAuthentication) 
     Authorization checks, 
-    whether that user has permission to access aspecific resource once they've been authenticated sometimes called access control 
+    whether that user has permission to access aspecific resource
+    once they've been authenticated sometimes called access control 
     because it controls which resources in the server the current user has access to. 
     (403 status code forbidden)
