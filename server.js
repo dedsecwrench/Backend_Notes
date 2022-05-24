@@ -108,6 +108,9 @@ server.use(cors());
 
 server.use("/api/v1", mainRouter);
 
-server.listen(8000,()=>{
+server.listen(process.env.PORT || 8000,()=>{
     console.log("> Host URL : http://localhost:8000/api/v1")
 })
+
+
+// ---------------------------------------------- 13April ----------------------------------------------------

@@ -10,7 +10,8 @@ const userController = require("../controller/user")
 
 // userRouter 
 userRouter.route("/")   
-          .get(userController.getDetails); // we can use all http methods over here for userRouter.
+          .get(userController.getDetails) // we can use all http methods over here for userRouter.
+          .post(userController.postDetails)
           // such as  .post()  or  .put()  or  .delete
 
 // exporting userRouter          

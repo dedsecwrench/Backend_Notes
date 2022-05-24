@@ -10,5 +10,10 @@ const getDetails = (request,response) =>{
     response.send({name:"nameera",age:23});
 }
 
+const postDetails = (request,response) =>{
+    response.send({name:"nameera",age:23});
+    response.send("success");
+}
 // here we are exporting this getDetails function from controller
 module.exports.getDetails = getDetails;
+module.exports.postDetails = postDetails;

@@ -242,58 +242,58 @@ in useEffect Hook =>
 
 # Main Route
 
-What basically happens is that when we creating the routes.
-like =>
-server.get("/user");
-server.get("/employee");
+    What basically happens is that when we creating the routes.
+    like =>
+    server.get("/user");
+    server.get("/employee");
 
-So this way not actually the correct way of creating backend application.
-reason behind is that once you will deploy the application.
-your application will be like https://localhost:3000 or some domain name or something.
-and then someone has to type /user or /employee.
-so in this format you will not be able to deploy the application.
+    So this way not actually the correct way of creating backend application.
+    reason behind is that once you will deploy the application.
+    your application will be like https://localhost:3000 or some domain name or something.
+    and then someone has to type /user or /employee.
+    so in this format you will not be able to deploy the application.
 
-So what do we need ->
-what we need is that one single route which is merged with multiple routes.
+    So what do we need ->
+    what we need is that one single route which is merged with multiple routes.
 
-/api/v1
+    /api/v1
 
-this v1 is a concept of versioning of APIs.
+    this v1 is a concept of versioning of APIs.
 
 ***Always remember***
 
-when you creating the backend application for the first time.
-that means you are creating the first version of the backend application.
-or the apis that you're having in the backend application.
+    when you creating the backend application for the first time.
+    that means you are creating the first version of the backend application.
+    or the apis that you're having in the backend application.
 
-Basically versioning concept is that =>
-imagine that currently you are having some data.
-then you want to make some changes in the APIs.
-but you can't directly modify your API.
-because your API is dependent on the backend.
-and your frontend is dependent on the APIs.
-so you have to create different APIs and you have to test them.
-and then those API's are working fine.. then only it'll go back to the frontend.
+    Basically versioning concept is that =>
+    imagine that currently you are having some data.
+    then you want to make some changes in the APIs.
+    but you can't directly modify your API.
+    because your API is dependent on the backend.
+    and your frontend is dependent on the APIs.
+    so you have to create different APIs and you have to test them.
+    and then those API's are working fine.. then only it'll go back to the frontend.
 
-so there's a very big concept of versioning of APIs.
+    so there's a very big concept of versioning of APIs.
 
 ***Always remember this thing***
 
-when you are creating the master route for the backend application.
-you will be creating like /api/v1
+    when you are creating the master route for the backend application.
+    you will be creating like /api/v1
 
-so instead of using server.get("/")
+    so instead of using server.get("/")
 
 we're gonna write =>
-server.use("/api/v1", and over here whatever the child routes you are having.. );
-first parameter is your master route.
-second parameter is your child routes.
+    server.use("/api/v1", and over here whatever the child routes you are having.. );
+    first parameter is your master route.
+    second parameter is your child routes.
 
 Folder structure =>
 
-2 folder will be created
-one is controller another is routes
-
+    2 folder will be created
+    one is controller another is routes
+    check files in these folder for further notes
 
 # Application Route
 
